@@ -1,3 +1,2 @@
-# angular-ivy-jnzmyh
+# Fetching user profile from Github public api
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-jnzmyh)
