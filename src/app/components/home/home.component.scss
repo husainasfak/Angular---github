@@ -1,0 +1,91 @@
+.overlay{
+     background: url('');
+     width: 100%;
+     height: 100vh;
+     background-repeat: no-repeat;
+     object-fit: cover;
+     background-position: center;
+     background-size: cover;
+     position: relative; 
+}
+
+
+.signin__section{
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100vh;
+     background: rgba(0,0,0,0.5);
+     z-index: 10;
+     .container{
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          .logo{
+               [nz-icon]{
+                    font-size: 2rem;
+               }
+               font-size: 1.6rem;
+               color: #fff;
+               font-weight: 400;
+               letter-spacing: 1.5px;     
+           }
+           .search_form{
+               .ant-input-affix-wrapper {
+                    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+                    border-color: #fff;
+               }
+               nz-input-group{
+                         font-size: 1.5rem;
+                         margin: .5rem 0;
+                        &:hover,&:focus,&:active,&::selection,&:focus-visible{
+                             border-color: #000;
+                             outline-color: #000;
+                        }
+                        input{
+                             margin: 0 .5rem;
+                        }
+               }
+              
+           }
+           .auth_button{
+                margin: 1rem 0;
+               [nz-button] {
+                    font-size: 1.2rem;
+                    padding: 1.6rem 6rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 0.2rem;
+                    letter-spacing: .5px;
+                    box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+                    border: 0;
+                    outline: 0;
+                    background: #101213;
+                  }
+           }
+
+
+          //  card
+          .card{
+               margin: 1rem 0;
+               cursor: pointer;
+               nz-avatar{
+                    object-fit: cover;
+
+               }
+          }
+
+          .loading{
+               font-size: 3.4rem;
+               margin: 2rem 0;
+               color: #fff;
+          }
+     }
+     
+}
+

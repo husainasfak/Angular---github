@@ -1,0 +1,38 @@
+<div class="count__info">
+     <p>Location : {{location}}</p>
+     <div class="badges">
+          <div class="count">
+               <p>Followers</p>
+               <nz-badge 
+               nzShowZero
+               nzStandalone
+               [nzOverflowCount]="9999999"
+               [nzCount]="followers"
+               [nzStyle]="{ backgroundColor: '#ecf0f1',color:'#000',fontSize:'0.5rem',padding:'2px .5rem',width:'5rem' }"
+     
+               ></nz-badge>
+          </div>
+     
+          <div class="count">
+               <p>Following</p>
+               <nz-badge 
+               nzShowZero
+               nzStandalone
+               [nzOverflowCount]="9999999"
+               [nzCount]="following"
+               [nzStyle]="{ backgroundColor: '#ecf0f1',color:'#000',fontSize:'0.5rem',padding:'2px .5rem',width:'5rem' }"
+               ></nz-badge>
+          </div>
+     
+          <div class="count">
+               <p>Public Repos</p>
+               <nz-badge 
+               nzShowZero
+               nzStandalone
+                [nzOverflowCount]="9999999"
+               [nzCount]="repoCount" 
+               [nzStyle]="{ backgroundColor: '#ecf0f1',color:'#000',padding:'2px .5rem',fontSize:'0.5rem',width:'5rem' }"></nz-badge>
+          </div>
+     </div>
+     
+</div>

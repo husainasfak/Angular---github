@@ -1,0 +1,45 @@
+<div class="overlay">
+
+</div>
+<div class="signin__section">
+  <div class="container">
+    <div class="logo">
+      <i class="icon" nz-icon [nzIconfont]="'icon-github'"></i> Github Public Repositories
+    </div>
+
+    <div class="auth_button">
+      <form class="search_form" [formGroup]="searchForm">
+        <nz-input-group [nzPrefix]="prefixTemplateUser">
+          <input 
+          type="text" 
+          nz-input 
+          placeholder="Enter your username" 
+          name='username'
+          formControlName="userName"
+          />
+        </nz-input-group>
+        <ng-template #prefixTemplateUser>
+          <i class="icon" nz-icon [nzIconfont]="'icon-github'"></i>
+        </ng-template>
+
+        <button (click)=onSearch() nz-button nzType="primary">Go to Profile</button>
+      </form>
+    </div>
+    <div class="card" *ngIf="userProfile" (click)="onProfile()">
+     <nz-card style="width:300px;">
+          <nz-card-meta
+            [nzTitle]="userProfile.name"
+            [nzDescription]="userProfile.location"
+            [nzAvatar]="avatarTemplate"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #avatarTemplate>
+          <nz-avatar [nzSize]="64" [nzSrc]="userProfile.avatar_url"></nz-avatar>
+        </ng-template>
+     </div>
+     <i *ngIf="isLoading" class="loading" nz-icon [nzType]="'loading'"></i>
+
+  </div>
+
+  
+</div>

@@ -1,0 +1,36 @@
+<div class="overlay">
+
+</div>
+<div class="main__content">
+     <nz-content>
+          <div class="inner__content">
+              <div class="info">
+                    <div class="basic__info">
+                         <app-basic-info 
+                         [avatar]="user.avatar_url"
+                         [name]="user.name"
+                         [url]="user.html_url"
+                         >
+                    </app-basic-info>
+                    </div>
+
+                   <div class="count__info">
+                    <app-count-info
+                    [location]="user.location"
+                    [followers]="user.followers"
+                    [following]="user.following"
+                    [repoCount]="user.public_repos"
+                         >
+
+                         </app-count-info>
+                   </div>
+               </div>
+
+               <i *ngIf="isLoading" class="loading" nz-icon [nzType]="'loading'"></i>
+          <div class="repo_table">
+                    <app-repo-table  *ngIf="!isLoading" [repoContent]="repositories"></app-repo-table>
+          </div>
+          </div>
+          
+     </nz-content>
+</div>
